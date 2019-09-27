@@ -1,0 +1,13 @@
+@mixin marg($mTop, $mRight, $mBottom, $mLeft){
+  margin-top: $mTop;
+  margin-right: $mRight;
+  margin-bottom: $mBottom;
+  margin-left: $mLeft;
+}
+
+@mixin padd($pTop, $pRight, $pBottom, $pLeft){
+  margin-top: $pTop;
+  margin-right: $pRight;
+  margin-bottom: $pBottom;
+  margin-left: $pLeft;
+}

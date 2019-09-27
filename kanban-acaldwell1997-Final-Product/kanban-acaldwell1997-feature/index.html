@@ -1,0 +1,87 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <title> Task Manager </title>
+</head>
+<body>
+    <header>
+        <h1> Task Manager </h1>
+        <button> Color Settings </button>
+    </header>
+    <div id="flex">
+    <section>
+        <div class="taskHeader">
+        <h2> Backlog </h2>
+        <button> Add task </button>
+        </div>
+        <div id="sectionOne">
+
+        </div>
+    </section>
+    <section>
+        <div class="taskHeader">
+        <h2> Implementation </h2>
+        <button> Add task </button>
+        </div>
+        <div id="sectionTwo">
+
+        </div>
+    </section>
+    <section>
+        <div class="taskHeader">
+        <h2> Complete </h2>
+        <button> Add task </button>
+        </div>
+        <div id="sectionThree">
+
+        </div>
+    </section>
+    </div>
+
+    <div id="addForm">
+        <form>
+            <fieldset>
+                <legend> Add A New Task </legend>
+                <label> Title </label>
+                <input type="text" id="titleText" name="title" class="required" />
+                <label> Description </label>
+                <textarea id="descript" name="description"> </textarea>
+                <label> Due Date </label>
+                <input type="date" id="due" name="dueDate" />
+            </fieldset>
+            <div class="formButtons">
+                <button type="submit" id="addSubmit" class="disabled"> Submit </button>
+                <button type="reset"> Reset </button>
+                <button type="button" class="cancel"> Cancel </button>
+            </div>
+        </form>
+    </div>	
+	
+	
+    <div id="colorChanger">
+        <form id="colorChoice">
+            <fieldset>
+                <legend> Color Selector </legend>
+                <label> Choose your color </label>
+                <button type="button" style="background-color: #00bcff"> </button>
+                <button type="button" style="background-color: #B22222"> </button>
+                <button type="button" style="background-color: #f47fbb"> </button>
+                <button type="button" style="background-color: #90c070"> </button>
+                <button type="button" style="background-color: #d896ff"> </button>
+                <button type="button" style="background-color: #FF5B21"> </button>
+            </fieldset>
+            <div class="formButtons">
+                <button type="submit" id="colorSubmit"> Done </button>
+                <button type="button" class="cancel"> Cancel </button>
+            </div>
+        </form>
+    </div>
+
+
+<script src="apiAccess.js"></script>
+</body>
+</html>

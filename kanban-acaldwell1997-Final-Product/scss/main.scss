@@ -1,0 +1,260 @@
+// main.scss
+
+
+
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/placeholders';
+@import 'base/typography';
+
+
+
+
+/* GENERAL
+===================================================================================== */
+
+body, h2, h3 {
+  margin: 0;
+}
+
+#flex{
+  @extend %flexDisplayColumn;
+}
+
+header{
+  @include padd(1rem, 3rem, 1rem, 3rem);
+  text-align: center;
+  background-color: $color-three;
+}
+
+section{
+  @extend %flexDisplayColumn;
+}
+
+article {
+  p:nth-of-type(2) {
+    color: $color-seven;
+	justify-content: flex-end;
+	align-items: end
+  }
+}
+
+article {
+  p:nth-of-type(2)::before {
+    content: url("../image/date.PNG");
+    position: relative;
+    bottom: .4rem;
+  }
+}
+
+button{
+  @include padd(.5rem, .75rem, .5rem, .75rem);
+  border: none;
+  border-radius: 5px;
+  font-family: $fonts;
+  font-size: 1rem;
+  background-color: $color-four;
+}
+
+article{
+  padding: .5rem;
+  box-shadow: 0 0 7px #cdcecf;
+  @extend %flexDisplayColumn;
+  padding: .5rem;
+  @include marg(1.5rem, 0, 0, 0);
+  box-shadow: 0 0 7px #cdcecf;
+  	-ms-transform: padding 1s;
+    -webkit-transition: padding 1s; 
+	transition: padding 1s;
+	background-color: $color-one;
+}
+
+form{
+  @extend %flexDisplayColumn;
+  align-items: center;
+}
+
+input, label, textarea, form{
+  width: 100%;
+}
+
+form button, label{
+  margin-top: 1rem;
+}
+
+.error{
+  background-color: rgba(255,0,0,.4);
+}
+
+.disabled{
+  opacity: .7;
+}
+
+.disabled:hover{
+  cursor: not-allowed;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+fieldset{
+  width: 60%;
+  margin-top: 2rem;
+}
+
+header, .taskHeader, #formButtons{
+  @extend %flexDisplayRow;
+  justify-content: space-between;
+}
+
+header button{
+  margin: 1rem;
+}
+
+form button:not(:last-of-type){
+  margin-right: 2rem;
+}
+
+
+
+
+#colorChoice fieldset button{
+  padding: 10%;
+  display: inline;
+  margin: 2%;
+}
+
+#colorChoice label{
+  display: block;
+}
+
+
+#colorChanger fieldset button{
+	font-size: 0;
+	padding: 10%;
+    display: inline;
+    margin: 2%;
+	-ms-transition: transform .5s;
+    -webkit-transition: transform .5s; 
+	transition: transform .5s;
+}
+
+
+
+p{
+    margin-top: .5rem;
+}
+
+article:last-of-type{
+    margin-bottom: 5rem;
+}
+
+
+#addForm, #colorChanger{
+    display: none;
+}
+
+
+
+/* BACKGROUND COLORS
+===================================================================================== */
+
+body{
+  background-color: $color-two;
+}
+
+
+/* FONTS
+===================================================================================== */
+
+
+h1{
+  color: $color-one;
+}
+
+h2, p, label{
+  color: $color-five;
+}
+
+h3, legend{
+  color: $color-six;
+}
+
+h1, h2, label, legend{
+  font-size: 1.5rem;
+}
+
+h3, p{
+  font-size: 1rem;
+}
+
+h1, h2, label, h3, p{
+  font-family: $fonts;
+}
+
+
+
+/* MEDIA QUERIES
+===================================================================================== */
+
+@media(min-width: 320px){
+
+  section{
+    @include marg(0, 1.5rem, 0, 1.5rem);
+  }
+
+  section:first-of-type{
+    margin-top: 2rem;
+  }
+
+}
+
+
+
+@media(min-width: 1000px){
+
+  header{
+    text-align: left;
+  }
+
+
+  #flex{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  section{
+    margin-top: 2rem;
+    width: calc(100%/3);
+  }
+
+}
+
+
+
+
+/* TRANSITIONS
+===================================================================================== */
+
+.taskHeader button{
+	-ms-transform: padding .5s;
+    -webkit-transition: padding .5s; 
+	transition: padding .5s;
+}
+
+.taskHeader button:hover{
+	padding: .75rem 1rem .75rem 1rem;
+}
+
+#colorChoice fieldset button:hover {
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+
+}
+
+article:hover {
+	padding: 1rem;
+
+}

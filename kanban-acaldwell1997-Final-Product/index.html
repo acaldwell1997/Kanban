@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title> Task Manager </title>
+</head>
+<body>
+    <header>
+        <h1> Task Manager </h1>
+        <button> Color Settings </button>
+    </header>
+    <div id="flex">
+    </div>
+    <div id="addForm">
+        <form>
+            <fieldset>
+                <legend> Add A New Task </legend>
+                <label> Title </label>
+                <input type="text" id="titleText" name="title" class="required" />
+                <label> Description </label>
+                <textarea id="descript" name="description"> </textarea>
+                <label> Due Date </label>
+                <input type="date" id="due" name="dueDate" />
+            </fieldset>
+            <div class="formButtons">
+                <button type="submit" id="addSubmit" class="disabled"> Submit </button>
+                <button type="reset"> Reset </button>
+                <button type="button" class="cancel"> Cancel </button>
+            </div>
+        </form>
+    </div>	
+    <div id="colorChanger">
+        <form id="colorChoice">
+            <fieldset>
+                <legend> Color Selector </legend>
+                <label> Choose your color </label>
+                <button type="button" style="background-color: #00bcff"> Blue </button>
+                <button type="button" style="background-color: #B22222"> Red </button>
+                <button type="button" style="background-color: #f47fbb"> Pink </button>
+                <button type="button" style="background-color: #90c070"> Green </button>
+                <button type="button" style="background-color: #d896ff"> Purple </button>
+                <button type="button" style="background-color: #FF5B21"> Orange </button>
+            </fieldset>
+            <div class="formButtons">
+                <button type="submit" id="colorSubmit"> Done </button>
+                <button type="button" class="cancel"> Cancel </button>
+            </div>
+        </form>
+    </div>
+<script src="apiAccess.js"></script>
+</body>
+</html>

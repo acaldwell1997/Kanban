@@ -1,0 +1,21 @@
+%floatRight{
+  float: right;
+}
+
+%floatLeft{
+  float: left;
+}
+
+%clearBoth{
+  clear: both;
+}
+
+%flexDisplayRow{
+  display: flex;
+  flex-direction: row;
+}
+
+%flexDisplayColumn{
+  display: flex;
+  flex-direction: column;
+}

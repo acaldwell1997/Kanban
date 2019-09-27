@@ -1,0 +1,243 @@
+/* GENERAL
+===================================================================================== */
+
+body, h2, h3 {
+    margin: 0;
+}
+
+#flex{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    padding: 1rem 3rem 1rem 3rem;
+    text-align: center;
+	background-color: #00bcff;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+article p:nth-of-type(2) {
+    display: flex;
+	color: #27ae60;
+	justify-content: flex-end;
+    align-items: end;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+	padding: .5rem .75rem .5rem .75rem;
+    background-color: #e5e5e5;
+	font-family: sans-serif;
+	font-size: 1rem;
+	color: #333333;
+}
+
+article {
+    padding: .5rem;
+    box-shadow: 0 0 7px #cdcecf;
+    display: flex;
+    flex-direction: column;
+	background-color: #FFFFFF;
+    margin: 1.5rem 0 0 0;
+	-ms-transform: padding 1s;
+    -webkit-transition: padding 1s; 
+	transition: padding 1s;
+
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, label, textarea, form{
+    width: 100%;
+}
+
+form button, label{
+    margin-top: 1rem;
+}
+
+
+.error{
+    background-color: rgba(255,0,0,.4);
+}
+
+
+.disabled{
+    opacity: .7;
+}
+
+.disabled:hover{
+    cursor: not-allowed;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+fieldset{
+width: 60%;
+margin-top: 2rem;
+}
+
+header, .taskHeader, .formButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header button{
+    margin: 1rem;
+}
+
+form button:not(:last-of-type){
+    margin-right: 2rem;
+}
+
+
+#colorChoice label{
+    display: block;
+}
+
+
+#colorChanger fieldset button{
+	font-size: 0;
+	padding: 10%;
+    display: inline;
+    margin: 2%;
+	-ms-transition: transform .5s;
+    -webkit-transition: transform .5s; 
+	transition: transform .5s;
+}
+
+
+
+p{
+    margin-top: .5rem;
+}
+
+article:last-of-type{
+    margin-bottom: 5rem;
+}
+
+
+#addForm, #colorChanger{
+    display: none;
+}
+
+article p:nth-of-type(2)::before{
+    content: url("../image/date.PNG");
+    position: relative;
+    bottom: .4rem;
+}
+
+
+/* BACKGROUND COLORS
+===================================================================================== */
+
+body{
+    background-color: #f7f8f9;
+}
+
+/* FONTS
+===================================================================================== */
+
+
+h1{
+    color: #FFFFFF;
+}
+
+h2, p, label{
+    color: #666666;
+}
+
+h3, legend{
+    color: #333333;
+}
+
+
+h1, h2, label, legend{
+    font-size: 1.5rem;
+}
+
+h3, p{
+    font-size: 1rem;
+}
+
+h1, h2, label, h3, p{
+    font-family: sans-serif;
+}
+
+
+/* MEDIA QUERIES
+===================================================================================== */
+
+@media(min-width: 320px){
+
+    section{
+        margin: 0 1.5rem 0 1.5rem;
+    }
+
+    section:first-of-type{
+        margin-top: 2rem;
+    }
+
+}
+
+
+
+@media(min-width: 1000px){
+
+    header{
+        text-align: left;
+    }
+
+
+    #flex{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    section{
+        margin-top: 2rem;
+        width: calc(100%/3);
+    }
+
+}
+
+
+/* TRANSITIONS
+===================================================================================== */
+
+.taskHeader button{
+	-ms-transform: padding .5s;
+    -webkit-transition: padding .5s; 
+	transition: padding .5s;
+}
+
+.taskHeader button:hover{
+	padding: .75rem 1rem .75rem 1rem;
+}
+
+#colorChoice fieldset button:hover {
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+
+}
+
+article:hover {
+	padding: 1rem;
+
+}
+
+

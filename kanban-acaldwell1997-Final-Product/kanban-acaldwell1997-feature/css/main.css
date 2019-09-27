@@ -1,0 +1,277 @@
+/* GENERAL
+===================================================================================== */
+
+body, h2, h3 {
+    margin: 0;
+}
+
+#flex{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    padding: 1rem 3rem 1rem 3rem;
+    text-align: center;
+}
+
+
+button{
+    padding: .5rem .75rem .5rem .75rem;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+article p:nth-of-type(2) {
+    display: flex;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+
+}
+
+article {
+    padding: .5rem;
+    box-shadow: 0 0 7px #cdcecf;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+
+
+/* BACKGROUND COLORS
+===================================================================================== */
+
+body{
+    background-color: #f7f8f9;
+}
+
+article{
+    background-color: #FFFFFF;
+}
+
+header{
+    background-color: #00bcff;
+}
+
+button{
+    background-color: #e5e5e5;
+}
+
+
+/* FONTS
+===================================================================================== */
+
+
+h1{
+    color: #FFFFFF;
+}
+
+h2, p, label{
+    color: #666666;
+}
+
+h3, button, legend{
+    color: #333333;
+}
+
+article p:nth-of-type(2){
+    color: #27ae60;
+}
+
+
+h1, h2, label, legend{
+    font-size: 1.5rem;
+}
+
+h3, p, button{
+    font-size: 1rem;
+}
+
+h1, h2, label, h3, p, button{
+    font-family: sans-serif;
+}
+
+
+/*
+===================================================================================== */
+
+
+article p:nth-of-type(2) {
+    justify-content: flex-end;
+    align-items: end
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+}
+
+article {
+    padding: .5rem;
+    margin: 1.5rem 0 0 0;
+    box-shadow: 0 0 7px #cdcecf;
+
+}
+
+p{
+    margin-top: .5rem;
+}
+
+article:last-of-type{
+    margin-bottom: 5rem;
+}
+
+
+
+article p:nth-of-type(2)::before{
+    content: url("../image/date.PNG");
+    position: relative;
+    bottom: .4rem;
+}
+
+@media(min-width: 320px){
+
+    section{
+        margin: 0 1.5rem 0 1.5rem;
+    }
+
+    section:first-of-type{
+        margin-top: 2rem;
+    }
+
+}
+
+
+
+@media(min-width: 1000px){
+
+    header{
+        text-align: left;
+    }
+
+
+    #flex{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    section{
+        margin-top: 2rem;
+        width: calc(100%/3);
+    }
+
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+input, label, textarea{
+    width: 100%;
+}
+
+form button, label{
+    margin-top: 1rem;
+}
+
+
+.error{
+    background-color: rgba(255,0,0,.4);
+}
+
+
+.disabled{
+    opacity: .7;
+}
+
+.disabled:hover{
+    cursor: not-allowed;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+fieldset{
+width: 60%;
+margin-top: 2rem;
+}
+
+header, .taskHeader, .formButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header button{
+    margin: 1rem;
+}
+
+form button:not(:last-of-type){
+    margin-right: 2rem;
+}
+
+
+
+
+/* CHOOSE YOUR COLOR */
+
+
+#colorChoice fieldset button:first-of-type{
+    background-color: #00bcff;
+}
+
+#colorChoice fieldset button:nth-of-type(2){
+    background-color: #B22222;
+}
+
+#colorChoice fieldset button:nth-of-type(3){
+    background-color: #f47fbb;
+}
+
+#colorChoice fieldset button:nth-of-type(4){
+    background-color: #90c070;
+}
+
+#colorChoice fieldset button:nth-of-type(5){
+    background-color: #d896ff;
+}
+
+#colorChoice fieldset button:last-of-type{
+    background-color: #FF5B21;
+}
+
+
+#colorChoice fieldset button{
+    padding: 10%;
+    display: inline;
+    margin: 2%;
+}
+
+#colorChoice label{
+    display: block;
+}
+
+
+
+#addForm{
+    display: none;
+}
+
+#colorChanger{
+    display: none;
+}
